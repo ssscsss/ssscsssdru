@@ -10,7 +10,7 @@ st.set_page_config(layout="wide")
 # 🌟 OpenAI API 키 입력받기
 st.sidebar.title("약8이")
 api_key = st.sidebar.text_input("🔑 OpenAI API 키를 입력하세요", type="password")
-
+client = openai.OpenAI(api_key=api_key)
 # 페이지 선택
 page = st.sidebar.radio("페이지 선택", ["기본정보", "데이터 예측", "3D 구조 예측", "질병 기반 조회"])
 
